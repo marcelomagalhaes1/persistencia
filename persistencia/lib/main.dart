@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'home_screen.dart';
+import 'screens/home.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // Inicialização do Hive compatível com Chrome e Telemóvel
-  await Hive.initFlutter();
-  runApp(const MeuAppListas());
+  runApp(const MyApp());
 }
 
-class MeuAppListas extends StatelessWidget {
-  const MeuAppListas({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Magalu - App Anúncios',
+      title: 'Magalu Anúncios',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
